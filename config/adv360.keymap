@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        rarrow: rarrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT &kp SPACE>;
+            label = "RARROW";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -31,6 +38,15 @@
     };
 
     macros {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        right_arrow {
+            bindings = <&rarrow>;
+            key-positions = <31 32>;
+        };
     };
 
     keymap {
