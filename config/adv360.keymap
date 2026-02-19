@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        ex_error: ex_error {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp COLON &kp E &kp R &kp R &kp O &kp R &kp COMMA &kp SPACE &kp RBRC &kp LEFT>;
+            label = "EX_ERROR";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -33,7 +40,14 @@
     macros {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        error {
+            bindings = <&ex_error>;
+            key-positions = <32 31>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
