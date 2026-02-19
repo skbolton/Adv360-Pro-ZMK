@@ -17,7 +17,7 @@
             bindings = <&kp RET>;
         };
 
-        ex_error: ex_error {
+        ex_err: ex_error {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LBRC &kp COLON &kp E &kp R &kp R &kp O &kp R &kp COMMA &kp SPACE &kp RBRC &kp LEFT>;
@@ -44,7 +44,7 @@
         compatible = "zmk,combos";
 
         error {
-            bindings = <&ex_error>;
+            bindings = <&ex_err>;
             key-positions = <32 31>;
         };
     };
